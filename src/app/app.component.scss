@@ -1,3 +1,5 @@
+@import '../assets/scss/main';
+
 .header {
   position: fixed;
   width: 100%;
@@ -16,6 +18,16 @@
 .header__title {
   color: #4e4e4e;
   margin: 0;
+
+  &:after {
+
+    @include bp-xsmall() {
+      content: 'K';
+    }
+    @include bp-small() {
+      content: 'KEUKERO';
+    }
+  };
 }
 
 .header__search-bar {
