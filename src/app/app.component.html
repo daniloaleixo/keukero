@@ -14,8 +14,24 @@
 
 <div class="search-results">
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let result of results">
-      {{ result.value }}
+    <li class="list-group-item" 
+    *ngFor="let result of showedResults"
+    [ngClass]="{ active: result == resultSelected }" 
+    (click)="selectResult(result)">
+
+        <div class="row" *ngIf="result == resultSelected">
+          <div class="col-xs-12">
+            <p>{{ result.category }} </p><p> {{ result.title }} </p><p> {{ result.city }} 
+            </p><p> Tel:{{ result.telephone }}</p>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="result != resultSelected">
+          <div class="col-xs-12">
+            {{ result.category }} - {{ result.title }} - {{ result.city }} 
+            - Tel:{{ result.telephone }}
+          </div>
+        </div>
     </li>
   </ul>
 </div>
