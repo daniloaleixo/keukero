@@ -19,13 +19,24 @@
     [ngClass]="{ active: result == resultSelected }" 
     (click)="selectResult(result)">
 
-        <div class="row" *ngIf="result == resultSelected">
-          <div class="col-xs-12">
+        <!-- If is selected -->
+        <div class="selected-item row" *ngIf="result == resultSelected">
+          <!-- Close button -->
+          <div class="selected-item__close-button">
+            <i class="material-icons md-18">close</i>
+          </div>
+
+          <div class="selected-item__company-image col-xs-6">
+            <img [src]="result.photoURL">
+          </div>
+
+          <div class="col-xs-6">
             <p>{{ result.category }} </p><p> {{ result.title }} </p><p> {{ result.city }} 
             </p><p> Tel:{{ result.telephone }}</p>
           </div>
         </div>
 
+        <!-- If not selected -->
         <div class="row" *ngIf="result != resultSelected">
           <div class="col-xs-12">
             {{ result.category }} - {{ result.title }} - {{ result.city }} 

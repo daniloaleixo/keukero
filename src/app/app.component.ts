@@ -39,7 +39,11 @@ export class AppComponent {
 
 
   	public selectResult(result: ISearchElement) {
-  		this.resultSelected = result;
+  		// close
+  		if(result == this.resultSelected) {
+  			this.resultSelected = null;
+  		}
+  		else this.resultSelected = result;
   	}
 
   	private constructMockResults(): ISearchElement[] {
@@ -54,7 +58,8 @@ export class AppComponent {
   				city: 'Diadema',
   				title: 'Empresa ' + i,
   				telephone: '11 994349394',
-  				tokens: [] 
+  				tokens: [],
+  				photoURL: 'https://source.unsplash.com/random/400X400'
   			};
 
   			results.push(result);
