@@ -1,0 +1,23 @@
+<nav class="header">
+  <h1 class="header__title"> KEUKERO </h1>
+  
+  <input class="header__search-bar form-control" 
+  placeholder="Recipient's username" 
+  type="text" 
+  [(ngModel)]=inputText 
+  (input)=handleInputChange()/>
+
+  <button type="button" class="btn btn-primary">
+    <i class="material-icons md-18">search</i>
+  </button>
+</nav>
+
+<div class="search-results">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let result of results">
+      {{ result.value }}
+    </li>
+  </ul>
+</div>
+
+

@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgb(250, 250, 250);
+  border-bottom: 1px solid rgb(235, 235, 235);
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  height: 97px;
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+.header__title {
+  color: #4e4e4e;
+  margin: 0;
+}
+
+.header__search-bar {
+  margin: auto 1rem;
+  flex-grow: 1;
+  height: 48px;
+}
+
+.search-results {
+  margin-top: 97px;
+}
