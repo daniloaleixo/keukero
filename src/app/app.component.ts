@@ -32,7 +32,7 @@ export class AppComponent {
   		this.showedResults = this.results;
   	}
 
-  	public handleInputChange(event) {
+  	public handleInputChange() {
   		this.showedResults = this.filterResults(this.results, this.inputText.toLowerCase());
   		this.resultSelected = null;
   	}

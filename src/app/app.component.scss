@@ -1,5 +1,7 @@
 @import '../assets/scss/main';
 
+$content-height: 48px;
+
 .header {
   position: fixed;
   width: 100%;
@@ -22,18 +24,23 @@
   &:after {
 
     @include bp-xsmall() {
-      content: 'K';
+      content: '';
     }
     @include bp-small() {
-      content: 'KEUKERO';
+      content: 'EUKERO';
     }
   };
+}
+
+.header__icon {
+  width: $content-height;
+  height: $content-height;
 }
 
 .header__search-bar {
   margin: auto 1rem;
   flex-grow: 1;
-  height: 48px;
+  height: $content-height;
 }
 
 .search-results {
